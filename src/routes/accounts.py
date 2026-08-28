@@ -2,9 +2,18 @@ from datetime import datetime, timezone
 from typing import Annotated
 
 from fastapi import APIRouter, Depends, HTTPException
-from schemas import UserRegistrationRequestSchema, UserRegistrationResponseSchema, MessageResponseSchema, \
-    UserActivationRequestSchema, PasswordResetCompleteRequestSchema, PasswordResetRequestSchema, \
-    UserLoginResponseSchema, UserLoginRequestSchema, TokenRefreshResponseSchema, TokenRefreshRequestSchema
+from schemas import (
+    UserRegistrationRequestSchema,
+    UserRegistrationResponseSchema,
+    MessageResponseSchema,
+    UserActivationRequestSchema,
+    PasswordResetCompleteRequestSchema,
+    PasswordResetRequestSchema,
+    UserLoginResponseSchema,
+    UserLoginRequestSchema,
+    TokenRefreshResponseSchema,
+    TokenRefreshRequestSchema
+)
 from sqlalchemy import select
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.ext.asyncio import AsyncSession
